@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Ejemplo Desplegable</title>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/'-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <hr>
+    <div class="cabecera">
+
+        <img class="logo" src="imagen/caballo.jpg" width="200" alt="logo">
+
+        <nav class="navegacion_pc">
+
+            <a class="link1" href="#">link1</a>   <a class="link2" href="#">link2</a>   <a class="link3" href="#">link3</a>   <a class="link4" href="#">link4</a>
+
+        </nav>
+
+        <nav class="navegador1">
+            <input type="checkbox" id="menu">
+            <label for="menu" class="menu_desplegable"> ☰ </label>
+            <ul class="link">
+              <li class="nav1"><a class="link1" href="#">Nav 1</a> </li>
+              <li class="nav2"><a class="link2" href="#">Nav 1</a> </li>
+              <li class="nav3"><a class="link3" href="#">Nav 1</a> </li>
+            </ul>
+          </nav>
+    
+
+    </div>
+
+    <hr>
+
+    <div class="secion1">
+
+        <h1 class="titulo">TITULO</h1>
+
+        <p class="parrafo1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur. <br>
+                           Atque illum quo placeat sit labore aspernatur, eaque esse. Lorem ipsum dolor sit amet consectetur.  <br>
+                           iusto maxime quos tempore ut voluptatum iure quia.</p>
+        
+        <img class="blanco" src="imagen/blanco.jfif" alt="blanco">
+
+    </div>
+        <hr>
+    <div class="secion2">
+
+        <img class="marron1" src="imagen/marron.jfif"  alt="marron1">
+
+        <p class="parrafo2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi sint totam nesciunt sapiente consequuntur nobis! <br>
+                                   Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore illo, cum voluptate temporibus exercitationem hic. <br>
+                                   inventore </p>
+
+        <img class="marron2" src="imagen/marron.jfif"  alt="marron2">
+        
+        <p class="parrafo3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae cupiditate, porro veritatis maiores itaque dolores! <br>
+                              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore illo, cum voluptate temporibus exercitationem hic. <br>
+                              inventore </p>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <hr>
+
+    <style>
+      /* Este media es del ordenador */
+     @media screen and (min-width: 600px) {
+
+        body{
+            background-color:gainsboro;
+        }
+
+        .logo{
+            margin-left: 5%;
+            margin-top: 5%;
+            width: 300px;
+            
+        }
+
+        .navegacion_pc{
+            margin-left: 35%;
+           margin-top: -5%;
+            margin-bottom: 5%;
+
+        }
+
+        .link1{
+            margin-right: 10%;
+            text-decoration: none;
+            color: black;
+            font-size: 2em;
+        }
+
+        .link2{
+            margin-right: 10%;
+            text-decoration: none;
+            color: black;
+            font-size: 2em;
+        }
+
+        .link3{
+            margin-right: 10%;
+            text-decoration: none;
+            color: black;
+            font-size: 2em;
+        }
+
+        .link4{
+            margin-right: 10%;
+            text-decoration: none;
+            color: black;
+            font-size: 2em;
+        }
+
+        .titulo{
+            margin-left: 15%;
+            margin-top: 8%; 
+        }
+
+        .parrafo1{
+
+        margin-left: 10%;
+        }
+        .blanco{
+
+            margin-left: 70%;
+            margin-top: -12%;
+            width: 300px;
+            
+
+        }
+
+       .marron1{
+
+        margin-left: 3%;
+        margin-top: 3%;
+        width: 300px;
+
+       }
+
+       .parrafo2{
+
+        text-align: center;
+        margin-top: -8%;
+        margin-left: 5%;
+
+       }
+
+       .marron2{
+
+        margin-left: 75%;
+        margin-top: 10%;
+        width: 300px;
+       }
+
+       .parrafo3{
+        text-align: center;
+        margin-top: -8%;
+        margin-right: 5%;
+       }
+       ul{
+        display: none;
+        visibility: hidden;
+  }
+  
+      input:checked  ~ ul{
+      display:block;
+      visibility: hidden;
+  }
+  
+    input {
+    display: none;
+    visibility: hidden;
+  }
+  
+  label {
+    box-sizing: border-box;
+    display: inline-block;
+    border: 1px solid red;
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    font-weight: bold;
+    text-align: center;
+    user-select: none;
+    visibility: hidden;
+  }
+  
+  /* Estilo del botón cuando se pasa el ratón por encima*/
+  label:hover{
+    background:  red;
+    visibility: hidden;
+  }
+  
+  /* Estilo del botón cuando se expande el menú*/
+  input:checked ~ label {
+    background: red;
+    visibility: hidden;
+  }
+  
+  ul{
+    margin-top:0;
+    padding: 0;
+    width: 200px;
+    visibility: hidden;
+  
+  }
+  
+  
+  li {
+    display: block;
+    background: red;
+    margin: 0;
+    padding: 10px;
+    list-style: none;
+    border-bottom: 1px solid red;
+    visibility: hidden;
+   
+  }
+  .menu_desplegable{
+    margin-left: 40%;
+  }
+  
+  /*Estilo cuando paso el ratón pasa encima de cada link del menu*/
+  li:hover {
+    filter: brightness(110%);
+    visibility: hidden;
+  }
+
+       
+
+        
+      }
+      /* Este media es del móvil */
+      @media screen and ( max-width: 600px){
+
+        body{
+            background-color: gainsboro;
+        }
+        .logo{
+           
+          width: 300px;
+            margin-left: 12%;
+        
+        }
+        .navegacion_pc{
+           visibility: hidden;
+
+        }
+        .titulo{
+           text-align: center;
+        }
+        .parrafo1{
+
+            text-align: center;
+        }
+        .blanco{
+            width: 300px;
+
+            margin-left: 12%;
+
+
+        }
+        .marron1{
+            width: 300px;
+            margin-left: 12%;
+
+        }
+        .parrafo2{
+
+            text-align: center;
+            
+
+        }
+        .marron2{
+
+            width: 300px;
+            margin-left: 12%;
+           
+        }
+
+        .parrafo3{
+            text-align: center;
+            
+        }
+        ul{
+    display: none;
+    
+  }
+  
+  input:checked  ~ ul{
+    display:block;
+  }
+  
+  input {
+    display: none;
+  }
+  
+  label {
+    box-sizing: border-box;
+    display: inline-block;
+    border: 1px solid red;
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    font-weight: bold;
+    text-align: center;
+    user-select: none;
+  }
+  
+  /* Estilo del botón cuando se pasa el ratón por encima*/
+  label:hover{
+    background:  red;
+  }
+  
+  /* Estilo del botón cuando se expande el menú*/
+  input:checked ~ label {
+    background: red;
+  }
+  .menu_desplegable{
+   margin-left: 50%;
+  }
+  ul{
+    margin-top:0;
+    padding: 0;
+    width: 200px;
+    margin-left: 30%;
+  
+  }
+  
+  
+  li {
+    display: block;
+    background:gainsboro;
+    margin: 0;
+    padding: 10px;
+    list-style: none;
+    border-bottom: 1px solid red;
+    text-align: center;
+   
+  }
+  
+  /*Estilo cuando paso el ratón pasa encima de cada link del menu*/
+  li:hover {
+    filter: brightness(110%);
+  }
+
+        
+      }
+
+    </style>
+</body>
+</html>
